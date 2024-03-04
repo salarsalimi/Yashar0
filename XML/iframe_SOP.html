@@ -1,0 +1,25 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <h1> This is my website</h1>
+        <h2> There is a frame bellow</h2>
+
+        <iframe id="iframe1"  src="http://127.0.0.1:8000/test.html"></iframe>
+
+
+        <script>
+            document.getElementById("iframe1").addEventListener('load', function() {
+                // Getting Conetent of iframe
+                var ifdoc = this.contentDocument || this.contentWindow.document;
+
+                // Access and print title of iframe
+                // This should only be possible if SOP is correct
+                var title = ifdoc.title;
+                console.log("Title of the page is: " + title);
+            })
+        </script>
+    </body>
+</html>
