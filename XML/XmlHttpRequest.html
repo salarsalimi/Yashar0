@@ -1,0 +1,24 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open ("GET","https://memoryleaks.ir/");
+
+            xhr.onreadystatechange = function(){
+                if ( xhr.readyState == 4){
+                    if ( xhr.status == 200){
+                        alert(xhr.responseText);
+                    }
+                    else{
+                        alert("Request failed with status:" + xhr.status);
+                    }
+                }
+            };
+            xhr.send()
+        </script>
+    </body>
+</html>
